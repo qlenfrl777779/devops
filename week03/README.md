@@ -24,11 +24,3 @@ cat > 파일 << 'EOF'       # 여러 줄을 파일로 저장 (heredoc)
 command -v python3        # 프로그램이 있는지 확인
 echo $?                   # 직전 명령 결과 (0 = 성공)
 ```
-
-
-~/devops 
-└── week03/ 
-└── qwen-web/
-├── chat.py 
-├── start.sh 
-└── README.md
