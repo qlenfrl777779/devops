@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: guestbook
 spec:
-  replicas: 4
+  replicas: 2
   selector:
     matchLabels:
       app: guestbook
@@ -29,17 +29,3 @@ spec:
             limits:
               memory: "128Mi"
               cpu: "500m"
-          livenessProbe:
-            httpGet:
-              path: /healthz
-              port: 5000
-            initialDelaySeconds: 5
-            periodSeconds: 10
-            failureThreshold: 3
-          readinessProbe:
-            httpGet:
-              path: /readyz
-              port: 5000
-            initialDelaySeconds: 3
-            periodSeconds: 5
-
